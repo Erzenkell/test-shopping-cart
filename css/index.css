@@ -1,0 +1,123 @@
+/* Sans media */
+
+/* Main */
+#main {
+	min-height: 100vh;
+}
+
+/* Video */
+.video {
+	position: relative;
+	background-color: grey;
+}
+.video > video {
+	width: 100%;
+	-o-filter: blur(1px);
+    filter: blur(1.2px) opacity(0.50) grayscale(0.10);
+    object-fit: cover;
+    overflow: hidden;
+}
+.video > #newcollection {
+	position: absolute;
+	color: black;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.video > h2 {
+	position: absolute;
+	color: black;
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom: 3px solid black;
+	border-top: 3px solid black;
+	width: fit-content;
+}
+.video > #shopnow {
+	position: absolute;
+	color: black;
+	border: 3px solid black;
+	padding: 10px 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-weight: bold;
+	transition: 0.5s;
+	text-decoration: none;
+}
+.video > #shopnow:hover {
+	color: white;
+	background-color: black;
+	border: 3px solid black;
+	transition: 0.5s;
+}
+
+/* Collection */
+.titlecollection {
+	height: 60px;
+	margin-top: 50px;
+}
+.titlecollection > h2 {
+	text-align: center;
+}
+.collection {
+
+    box-sizing: border-box;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.collection > div > img {
+	object-fit: cover;
+	width: -webkit-fill-available;
+	height: 100%;
+}
+.collection > div {
+	position: relative;
+}
+.collection > div > a {
+	position: absolute;
+	background-color: black;
+	color: white;
+	padding: 15px 30px;
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	transition: 0.5s;
+	width: 80px;
+}
+.collection > div > a > h3{
+	margin: auto;
+}
+.collection > div > a:hover {
+	background-color: white;
+	color: black;
+	transition: 0.5s;
+}
+
+/* Smartphone */
+@media screen and ( max-width: 600px ) {
+	.video > #newcollection {
+		bottom: 105px;
+	}
+	.video > h2 {
+		bottom: 70px;
+	}
+	.video > #shopnow {
+		bottom: 20px;
+	}
+}
+
+/* PC */
+@media screen and ( min-width: 601px ) {
+	.collection {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.video > #newcollection {
+		bottom: 135px;
+	}
+	.video > h2 {
+		bottom: 100px;
+	}
+	.video > #shopnow {
+		bottom: 50px;
+	}
+}

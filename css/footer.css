@@ -1,0 +1,191 @@
+/* Sans media */
+body > footer {
+	/* display: grid;
+	row-gap: var( --footer-padding );
+	padding: 40px var( --global-horizontal-padding ) 0; */
+	box-sizing: border-box;	
+}
+body > footer > .footer1 > section {
+	width: 50%;
+}
+
+/* Footer0 */
+.footer0 {
+	text-align: center;
+	margin: 0 0 30px 0;
+	line-height: 25px;
+	padding-top: 30px;
+	border-top: 1px solid var( --border-color );
+}
+.footer0 > section {
+	margin-bottom: 20px;
+}
+.footer0 > section:nth-child( 1 ) {
+	opacity: 0.6;
+}
+.footer0 > section:nth-child( 4 ) {
+	border: 3px solid black;
+	padding: 5px 70px;
+	width: fit-content;
+	margin: auto;
+	font-weight: bold;
+	transition: 0.5s;
+}
+.footer0 > section:nth-child( 4 ):hover {
+	color: white;
+	background-color: black;
+	border: 3px solid black;
+	transition: 0.5s;
+}
+
+/* Footer1 */
+.footer1 {
+	display: flex;
+	box-sizing: border-box;
+	border-top: 1px solid var( --border-color );
+}
+
+
+/* Footer1 */
+.footer1 {
+	display: flex;
+}
+
+
+/* Réseaux sociaux */
+body > footer > .footer1 > section:nth-child( 1 ) {
+	display: flex;
+	justify-content: flex-end;
+	border-right: 1px solid var( --border-color );
+	margin: 10px 0 10px 0;
+}
+body > footer > .footer1 > section:nth-child( 1 ) img {
+	height: 30px;
+}
+body > footer > .footer1 > section:nth-child( 1 ) > a {
+	padding-right: 5%;
+}
+
+
+/* Payement */
+body > footer > .footer1 > section:nth-child( 2 ) {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px 0 10px 0;
+}
+body > footer > .footer1 > section:nth-child( 2 ) img {
+	height: 30px;
+}
+body > footer > .footer1 > section:nth-child( 2 ) img {
+	padding-left: 5%;
+}
+
+
+/* Footer Part 2 */
+body > footer > .footer2 {
+	background-color: black;
+}
+body > footer > .footer2 > div {
+	color: white;
+	padding: 20px;
+}
+body > footer > .footer2 > div > section > h5 {
+	margin: 0 0 10px 0;
+	line-height: 1.2em;
+}
+
+/* Logo Esprit Shonn Footer */
+.logofooter {
+	height: 40px;
+}
+
+/* Flag */
+.flagfooter {
+	display: flex;
+}
+.flagfooter > h4 {
+	padding-left: 10px;
+	line-height: 25px;
+}
+
+
+/* Signin footer */
+.signinfooter {
+	display: flex;
+	border: 2px solid white;
+	width: fit-content;
+	padding: 5px 10px 5px 5px;
+	align-items: center;
+	transition: 0.5s;
+}
+.signinfooter:hover {
+	border: 2px solid black;
+	transition: 0.5s;
+}
+.signinfooter > img {
+	height: 20px;
+}
+.signinfooter > h4 {
+	margin-left: 10px;
+	width: max-content;
+}
+
+/* Font */
+footer h2, h3 {
+	width: max-content;
+	line-height: 25px;
+}
+
+/* Credit */
+.credit {
+	background-color: black;
+	color: white;
+}
+.credit > h4 {
+	text-align: center;
+}
+
+/* Smartphone */
+@media screen and ( max-width: 600px ) {
+
+	/* Adresse */
+	body > footer > section:nth-child( 1 ) {
+		text-align: center;
+	}
+	body > footer > .footer2 > div {
+		display: grid;
+		gap: 15px;
+		grid-template-columns: 4fr 4fr 4fr;
+	}
+	.gridcorrection {
+		grid-column-start: 3;
+		grid-row-start: 1;
+	}
+	.signinfooter {
+		margin-top: 50%;
+	}
+	#space {
+		margin-bottom: 16px;
+	}
+}
+
+/* PC */
+@media screen and ( min-width: 601px ) {
+
+	body > footer {
+		grid-template-columns: 50% 50%;
+		align-items: center;
+	}
+	/* mentions légales */
+	body > footer > section:nth-child( 3 ) {
+		grid-column: 1 / span 2;
+	}
+	body > footer > .footer2 > div {
+		display: grid;
+		gap: 15px;
+		grid-template-columns: 2fr 2fr 2fr 1fr;
+	}
+	body > footer > .footer2 > div {
+		margin: 0 5% 0 5%;
+	}
+}

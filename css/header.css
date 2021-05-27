@@ -1,0 +1,87 @@
+/* Global */
+body > header {
+	z-index: 10;
+	background-color: #fff;
+	width: 100%;
+	border-bottom: 1px solid var( --border-color );
+}
+
+/* Newsletter */
+header > section:nth-child( 1 ) {
+    height: 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+	line-height: 15px;
+}
+
+/* Flag */
+.flagheader {
+	display: flex;
+	height: inherit;
+	margin-left: 94%;
+	align-items: flex-end;
+	position: absolute;
+    right: 25px;
+}
+.flagheader > img {
+	margin-top: 10%;
+	height: 15px;
+}
+.flagheader > p {
+	text-align: center;
+	padding-left: 10px;
+}
+header > section:nth-child( 3 ) {
+	height: 45px;
+}
+
+/* Searchbar */
+.searchbar {
+	display: flex;
+	margin-left: 3%;
+	align-items: flex-end;
+}
+.searchbar > img {
+	height: 15px;
+}
+.searchbar > p {
+	text-align: center;
+	padding-left: 10px;
+	opacity: 0.5;
+}
+
+
+/* Smartphone */
+@media screen and ( max-width: 600px ) {
+	body > header {
+		height: var( --navbar-height );
+	}
+	body > header {
+		/* DesactivatedStiky */
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.flagheader {
+		display: none;
+	}
+}
+
+/* PC */
+@media screen and ( min-width: 601px ) {
+	body > header {
+		height: var( --navbar-height );
+	}
+	/* body > header {
+		DesactivatedStiky
+		position: fixed;
+		top: 0;
+		left: 0;
+	} */
+	/* Section Flag */
+	header > section:nth-child( 2 ) {
+	height: 30px;
+	position: relative;
+	}
+}
